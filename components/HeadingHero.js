@@ -4,16 +4,8 @@ import styled from 'styled-components'
 import { HeroGridContainer, CardGrid } from '../styles'
 
 const MainHeader = styled.h1`
-  font-size: ${({ theme }) => theme.font.h1};
-  line-height: ${({ theme }) => theme.lineHeight.h1};
-  margin-bottom: 1.6rem;
   width: 40rem;
 `
-const SubHeading = styled.h2`
-  font-size: ${({ theme }) => theme.font.h2};
-  font-weight: normal;
-`
-
 const TitleWrapper = styled.div`
   grid-column: 3 / span 5;
 `
@@ -28,7 +20,7 @@ const HeadingHero = ({ main, sub, children }) => {
     <HeroGridContainer>
       <TitleWrapper>
         <MainHeader>{main}</MainHeader>
-        <SubHeading>{sub}</SubHeading>
+        <h2>{sub}</h2>
       </TitleWrapper>
       <ButtonWrapper>{children}</ButtonWrapper>
     </HeroGridContainer>

@@ -1,18 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../styles/theme'
 
 const Heading = styled.h4`
-  font-size: ${({ theme }) => theme.font.h4};
-  line-height: ${({ theme }) => theme.lineHeight.h4};
   color: ${({ theme }) => theme.color.yellow};
-  margin-bottom: 1.6rem;
 `
 
 const Text = styled.p`
-  font-size: ${({ theme }) => theme.font.p};
   color: ${({ theme }) => theme.color.white};
-  margin-bottom: 1.6rem;
 `
 
 const Input = styled.input`
