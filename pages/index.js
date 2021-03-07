@@ -1,65 +1,51 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import ButtonMain from '../components/ButtonMain'
+import Footer from '../components/Footer'
+import HeadingHero from '../components/HeadingHero'
+import HomeCardLeft from '../components/HomeCardLeft'
+import HomeCardRight from '../components/HomeCardRight'
+import HomeIdeaCard from '../components/HomeIdeaCard'
+import Nav from '../components/Nav'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      <main>
+        <Nav />
+        <HeadingHero
+          main="testing my ideas"
+          sub="I have many ideas, this site reminds me when to let go and test a new one."
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <ButtonMain name="view my ideas" src="/ideas" />
+        </HeadingHero>
+        <HomeCardRight
+          main="kill your darlings"
+          sub="I find it hard to move on from an idea, but if I don’t, I won’t have the time to find a successful one."
+          src="/cross.svg"
+          color="yellow"
+        />
+        <HomeCardLeft
+          main="when to move on"
+          sub="The rule is simple; if the idea doesn’t generate $1000 of revenue after the first 3 months, it’s time for me to test a new idea."
+          color="pink"
+        />
+        <HomeCardRight
+          main="creating the idea"
+          sub="By using the mindset of design sprints and design principles, I’ll be able to quickly create an MVP and test out the idea. "
+          color="orange"
+        />
+        <HomeIdeaCard
+          main="a list of my ideas"
+          sub="Find out which of my ideas were successful and which failed."
+          color="orange"
+          src="idea-app.png"
+        />
+      </main>
+      <Footer />
+    </>
   )
 }
