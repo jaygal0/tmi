@@ -4,7 +4,8 @@ import { GridContainer, HomeCard } from '../styles'
 import styled from 'styled-components'
 
 const Img = styled.img`
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 4;
+  justify-self: center;
 `
 
 const Wrapper = styled.div`

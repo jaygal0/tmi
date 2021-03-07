@@ -5,6 +5,7 @@ import HeadingNormal from './HeadingNormal'
 
 const Img = styled.img`
   grid-column: 6 / span 4;
+  justify-self: center;
 `
 
 const Wrapper = styled.div`

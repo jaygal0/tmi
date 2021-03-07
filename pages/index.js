@@ -30,11 +30,13 @@ export default function Home() {
         />
         <HomeCardLeft
           main="when to move on"
+          src="/three-dots.svg"
           sub="The rule is simple; if the idea doesn’t generate $1000 of revenue after the first 3 months, it’s time for me to test a new idea."
           color="pink"
         />
         <HomeCardRight
           main="creating the idea"
+          src="design-process.svg"
           sub="By using the mindset of design sprints and design principles, I’ll be able to quickly create an MVP and test out the idea. "
           color="orange"
         />

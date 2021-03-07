@@ -2,6 +2,8 @@ import Link from 'next/link'
 import React from 'react'
 import ButtonSecondary from './ButtonSecondary'
 import styled from 'styled-components'
+import Form from './Form'
+import Copyright from './Copyright'
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -45,26 +47,6 @@ const FooterFormWrapper = styled.div`
   grid-column: 7 / span 5;
 `
 
-const FormHeading = styled.h4`
-  font-size: ${({ theme }) => theme.font.h4};
-  line-height: ${({ theme }) => theme.lineHeight.h4};
-  color: ${({ theme }) => theme.color.yellow};
-  margin-bottom: 1.6rem;
-`
-
-const FormText = styled.p`
-  color: white;
-  margin-bottom: 1.6rem;
-`
-const Copyright = styled.div`
-  font-size: ${({ theme }) => theme.font.meta};
-  margin-top: 4.8rem;
-  line-height: ${({ theme }) => theme.lineHeight.meta};
-  color: white;
-  text-transform: uppercase;
-  font-weight: 300;
-`
-
 const Footer = () => {
   return (
     <FooterContainer>
@@ -87,16 +69,8 @@ const Footer = () => {
           </NavWrapper>
         </FooterLogoWrapper>
         <FooterFormWrapper>
-          <FormHeading>follow my journey</FormHeading>
-          <FormText>
-            Stay up-to-date with what idea I will be releasing next and find out
-            if it was successful or not.
-          </FormText>
-          <input type="text" placeholder="enter email" />
-          <ButtonSecondary src="#" name="submit" />
-          <Copyright>
-            &copy;2021 - Designed &amp; built by Joshua Galinato
-          </Copyright>
+          <Form />
+          <Copyright />
         </FooterFormWrapper>
       </FooterWrapper>
     </FooterContainer>

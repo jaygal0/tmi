@@ -11,7 +11,12 @@ const Button = styled.button`
   outline: none;
   border: none;
   text-transform: uppercase;
-  background: orangered;
+  background: rgb(244, 114, 28);
+  background: linear-gradient(
+    239deg,
+    rgba(244, 114, 28, 1) 0%,
+    rgba(237, 18, 118, 1) 100%
+  );
   color: white;
   cursor: pointer;
 `

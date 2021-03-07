@@ -10,7 +10,12 @@ body {
   letter-spacing: 0.05rem;
 }
 
+h3 {
+  margin-bottom: 1.6rem;
+}
+
 p {
   font-size: 1.6rem;
   line-height: 2.4rem;
+  margin-bottom: 2.4rem;
 }
