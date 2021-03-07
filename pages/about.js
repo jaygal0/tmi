@@ -3,10 +3,12 @@ import Footer from '../components/Footer'
 import TextBox from '../components/TextBox'
 import Nav from '../components/Nav'
 import HeadingHero from '../components/HeadingHero'
+import Metadata from '../components/Metadata'
 
 const about = () => {
   return (
     <>
+      <Metadata title="About" />
       <main>
         <Nav />
         <HeadingHero

@@ -1,19 +1,16 @@
-import Head from 'next/head'
 import ButtonMain from '../components/ButtonMain'
 import Footer from '../components/Footer'
 import HeadingHero from '../components/HeadingHero'
 import HomeCardLeft from '../components/HomeCardLeft'
 import HomeCardRight from '../components/HomeCardRight'
 import HomeIdeaCard from '../components/HomeIdeaCard'
+import Metadata from '../components/Metadata'
 import Nav from '../components/Nav'
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Metadata title="Home" />
       <main>
         <Nav />
         <HeadingHero
