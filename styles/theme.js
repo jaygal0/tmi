@@ -36,4 +36,9 @@ export default {
     bottom: '1.6rem',
   },
   borderRadius: '1.6rem',
+  breakPoint: {
+    phone: '375px',
+    tablet: '375px',
+    desktop: '375px',
+  },
 }

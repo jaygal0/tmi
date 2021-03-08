@@ -17,15 +17,15 @@ const IdeaWrapper = () => {
   return (
     <Wrapper>
       <Idea
-        url="/about"
+        url="/ideas/detail"
         src="/crouchinBanner.png"
-        revenue="$0"
+        revenue={70}
         released="10/20/89"
       />
       <Idea
         url="/about"
         src="/crouchinBanner.png"
-        revenue="$0"
+        revenue={10000}
         released="10/20/89"
       />
     </Wrapper>

@@ -41,8 +41,12 @@ const NavWrapper = styled.div`
 const List = styled.a`
   text-decoration: none;
   color: white;
+  cursor: pointer;
+  &:hover {
+    color: ${({ theme }) => theme.color.yellow};
+    transition: ${({ theme }) => theme.transition.link};
+  }
 `
-
 const FooterFormWrapper = styled.div`
   grid-column: 7 / span 5;
 `
