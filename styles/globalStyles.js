@@ -14,43 +14,53 @@ body {
 }
 
 h1 {
-  font-size: ${({ theme }) => theme.font.h1};
-  line-height: ${({ theme }) => theme.lineHeight.h1};
-  margin-bottom: ${({ theme }) => theme.margin.bottom};
+  font-size: ${({ theme }) => theme.font.desktop.h1};
+  line-height: ${({ theme }) => theme.lineHeight.desktop.h1};
+  margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
   color: ${({ theme }) => theme.color.darkBlue};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+  font-size: ${({ theme }) => theme.font.phone.h1};
+  line-height: ${({ theme }) => theme.lineHeight.phone.h1};
+  }
 }
  
 h2 {
-  font-size: ${({ theme }) => theme.font.h2};
+  font-size: ${({ theme }) => theme.font.desktop.h2};
   font-weight: normal;
-  margin-bottom: ${({ theme }) => theme.margin.bottom};
+  margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+  font-size: ${({ theme }) => theme.font.phone.h2};
+  line-height: ${({ theme }) => theme.lineHeight.phone.h2};
+  }
 }
 
 h3 {
-    font-size: ${({ theme }) => theme.font.h3};
-    line-height: ${({ theme }) => theme.lineHeight.h3};
-    margin-bottom: ${({ theme }) => theme.margin.bottom};
+    font-size: ${({ theme }) => theme.font.desktop.h3};
+    line-height: ${({ theme }) => theme.lineHeight.desktop.h3};
+    margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
 }
 
 h4 {
-  font-size: ${({ theme }) => theme.font.h4};
-  line-height: ${({ theme }) => theme.lineHeight.h4};
-  margin-bottom: ${({ theme }) => theme.margin.bottom};
+  font-size: ${({ theme }) => theme.font.desktop.h4};
+  line-height: ${({ theme }) => theme.lineHeight.desktop.h4};
+  margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
 }
 
 h5 {
-    font-size: ${({ theme }) => theme.font.h5};
-    line-height: ${({ theme }) => theme.lineHeight.h5};
+    font-size: ${({ theme }) => theme.font.desktop.h5};
+    line-height: ${({ theme }) => theme.lineHeight.desktop.h5};
     font-weight: bold;
     color: ${({ theme }) => theme.color.darkBlue};
     text-transform: capitalize;
-    margin-bottom: ${({ theme }) => theme.margin.bottom};
+    margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
 }
 
 p {
-  font-size: ${({ theme }) => theme.font.p};
-  line-height: ${({ theme }) => theme.lineHeight.p};
-  margin-bottom: ${({ theme }) => theme.margin.bottom};
+  font-size: ${({ theme }) => theme.font.desktop.p};
+  line-height: ${({ theme }) => theme.lineHeight.desktop.p};
+  margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
 }
 
 `

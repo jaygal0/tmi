@@ -13,23 +13,8 @@ const Wrapper = styled.div`
   }
 `
 
-const IdeaWrapper = () => {
-  return (
-    <Wrapper>
-      <Idea
-        url="/ideas/detail"
-        src="/crouchinBanner.png"
-        revenue={70}
-        released="10/20/89"
-      />
-      <Idea
-        url="/about"
-        src="/crouchinBanner.png"
-        revenue={10000}
-        released="10/20/89"
-      />
-    </Wrapper>
-  )
+const IdeaWrapper = ({ children }) => {
+  return <Wrapper>{children}</Wrapper>
 }
 
 export default IdeaWrapper

@@ -10,7 +10,7 @@ const Navbar = styled.nav`
 `
 
 const NavContainer = styled.div`
-  font-size: 1.6rem;
+  font-size: ${({ theme }) => theme.font.desktop.p};
   text-decoration: none;
   display: flex;
 `

@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { WebsiteLink } from '../styles'
 
 const Div = styled.div`
-  font-size: ${({ theme }) => theme.font.meta};
+  font-size: ${({ theme }) => theme.font.desktop.meta};
   margin-top: 4.8rem;
-  line-height: ${({ theme }) => theme.lineHeight.meta};
+  line-height: ${({ theme }) => theme.lineHeight.desktop.meta};
   color: white;
   text-transform: uppercase;
   font-weight: 300;

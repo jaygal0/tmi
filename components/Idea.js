@@ -17,10 +17,10 @@ const MainImage = styled.img`
 
 const Idea = ({ url, src, released, revenue }) => {
   return (
-    <Link href={url}>
+    <Link href={`/ideas/${url}`}>
       <Article>
         <MetaButton released={released} revenue={revenue} />
-        <MainImage src={src} alt="" />
+        <MainImage src="https://www.fillmurray.com/640/360" alt="" />
       </Article>
     </Link>
   )

@@ -9,6 +9,10 @@ const Article = styled.article`
   width: 100%;
   height: auto;
   margin-bottom: 4.8rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 const H3 = styled.h3`
   color: ${({ theme }) => theme.color.yellow};
@@ -20,7 +24,7 @@ const Snippet = styled.p`
 const Blog = ({ url, heading, snippet }) => {
   return (
     <>
-      <Link href={url}>
+      <Link href={`/blog/${url}`}>
         <Article>
           <H3>{heading}</H3>
           <Snippet>{snippet}</Snippet>

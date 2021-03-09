@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Border = styled.div`
   color: ${({ theme }) => theme.color.darkBlue};
-  font-size: ${({ theme }) => theme.font.meta};
+  font-size: ${({ theme }) => theme.font.desktop.meta};
   text-transform: capitalize;
   padding: 0.4rem 1.2rem;
   border: 1px solid ${({ theme }) => theme.color.darkBlue};

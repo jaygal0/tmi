@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { HeroGridContainer, CardGrid } from '../styles'
+import { HeroGridContainer } from '../styles'
 
 const MainHeader = styled.h1`
   width: 40rem;
@@ -11,16 +11,24 @@ const MainHeader = styled.h1`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
-    width: 100rem;
+    width: min-content;
   }
 `
 const TitleWrapper = styled.div`
   grid-column: 3 / span 5;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-column: 1 / -1;
+  }
 `
 
 const ButtonWrapper = styled.div`
   grid-row: 2;
   grid-column: 3 / span 2;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-column: 1 / -1;
+  }
 `
 const Websitelink = styled.a`
   text-decoration: none;

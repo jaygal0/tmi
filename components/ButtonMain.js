@@ -19,6 +19,10 @@ const Button = styled.button`
   );
   color: white;
   cursor: pointer;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    width: 100%;
+  }
 `
 
 const ButtonMain = ({ name, src }) => {
