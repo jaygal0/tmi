@@ -6,6 +6,10 @@ import HeadingNormal from './HeadingNormal'
 const Img = styled.img`
   grid-column: 6 / span 4;
   justify-self: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    display: none;
+  }
 `
 
 const Wrapper = styled.div`

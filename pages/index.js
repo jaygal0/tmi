@@ -7,7 +7,7 @@ import HomeIdeaCard from '../components/HomeIdeaCard'
 import Metadata from '../components/Metadata'
 import Nav from '../components/Nav'
 
-export default function Home() {
+export default function Home({ idea }) {
   return (
     <>
       <Metadata title="Home" />
@@ -41,9 +41,27 @@ export default function Home() {
           main="a list of my ideas"
           sub="Find out which of my ideas were successful and which failed."
           color="orange"
+          idea={idea}
         />
       </main>
       <Footer />
     </>
   )
+}
+
+const client = require('contentful').createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+})
+
+export const getStaticProps = async () => {
+  let data = await client.getEntries({
+    content_type: 'idea',
+  })
+
+  return {
+    props: {
+      idea: data.items,
+    },
+  }
 }

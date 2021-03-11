@@ -6,6 +6,13 @@ export const GridContainer = styled.section`
   grid-column-gap: 3.2rem;
   margin: 0 1.6rem 4.8rem 1.6rem;
   align-items: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-column-gap: 1.6rem;
+    margin: 9.6rem 1.6rem;
+  }
 `
 export const HeroGridContainer = styled.section`
   display: grid;
@@ -32,6 +39,10 @@ export const HomeCard = styled.div`
   padding: 9.6rem 0;
   color: white;
   align-items: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-column: 1 / -1;
+  }
 `
 export const WebsiteLink = styled.a`
   color: white;
