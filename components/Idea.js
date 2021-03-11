@@ -2,26 +2,44 @@ import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 import MetaButton from './MetaButton'
+import Image from 'next/image'
 
-const Article = styled.article`
-  position: relative;
-`
-const MainImage = styled.img`
+const MainImage = styled.div`
   width: 47.5rem;
   height: 47.5rem;
-  object-fit: cover;
-  border: none;
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-bottom: 3.2rem;
-`
+  position: relative;
 
-const Idea = ({ url, src, released, revenue }) => {
+  &:hover {
+    cursor: pointer;
+    scale: 1.01;
+    transition: ${({ theme }) => theme.transition.images};
+  }
+`
+const Idea = ({ url, src, released, revenue, description, width, height }) => {
   return (
     <Link href={`/ideas/${url}`}>
-      <Article>
-        <MetaButton released={released} revenue={revenue} />
-        <MainImage src="https://www.fillmurray.com/640/360" alt="" />
-      </Article>
+      <article>
+        <MainImage>
+          <MetaButton released={released} revenue={revenue} />
+          <Image
+            src={`https:${src}`}
+            alt={description}
+            layout="fill"
+            objectFit="cover"
+            quality={75}
+            priority
+            className="border-image"
+          />
+          <style jsx global>{`
+            .border-image {
+              border-radius: 1.6rem;
+              z-index: -1;
+            }
+          `}</style>
+        </MainImage>
+      </article>
     </Link>
   )
 }

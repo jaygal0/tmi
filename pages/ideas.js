@@ -21,10 +21,13 @@ const ideas = ({ idea }) => {
           {idea.map(({ fields, sys }) => (
             <Idea
               key={sys.id}
-              url={fields.slug}
-              src={fields.image}
+              url={fields.slug.toLowerCase()}
+              src={fields.image.fields.file.url}
+              width={fields.image.fields.file.details.image.width}
+              height={fields.image.fields.file.details.image.height}
               released={fields.released}
               revenue={fields.revenue}
+              description={fields.image.fields.description}
             />
           ))}
         </IdeaWrapper>

@@ -14,6 +14,9 @@ const MainHeader = styled.h1`
     width: min-content;
   }
 `
+const SubHeading = styled.h2`
+  text-transform: capitalize;
+`
 const TitleWrapper = styled.div`
   grid-column: 3 / span 5;
 
@@ -33,15 +36,20 @@ const ButtonWrapper = styled.div`
 const Websitelink = styled.a`
   text-decoration: none;
 `
+const Published = styled.p`
+  font-size: ${({ theme }) => theme.font.meta};
+  font-style: italic;
+`
 
-const HeadingHero = ({ main, sub, link, children }) => {
+const HeadingHero = ({ main, sub, link, published, children }) => {
   return (
     <HeroGridContainer>
       <TitleWrapper>
         <Websitelink href={link} target="_blank">
           <MainHeader link={link}>{main}</MainHeader>
         </Websitelink>
-        <h2>{sub}</h2>
+        <SubHeading>{sub}</SubHeading>
+        {!published ? '' : <Published>{`Published: ${published}`}</Published>}
       </TitleWrapper>
       <ButtonWrapper>{children}</ButtonWrapper>
     </HeroGridContainer>

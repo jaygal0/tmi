@@ -18,6 +18,7 @@ h1 {
   line-height: ${({ theme }) => theme.lineHeight.desktop.h1};
   margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
   color: ${({ theme }) => theme.color.darkBlue};
+  text-transform: lowercase;
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
   font-size: ${({ theme }) => theme.font.phone.h1};
@@ -40,6 +41,7 @@ h3 {
     font-size: ${({ theme }) => theme.font.desktop.h3};
     line-height: ${({ theme }) => theme.lineHeight.desktop.h3};
     margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
+    text-transform: lowercase;
 }
 
 h4 {

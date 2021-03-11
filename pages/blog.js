@@ -8,9 +8,6 @@ import { GridContainer } from '../styles'
 import Blog from '../components/Blog'
 
 const blog = ({ blog }) => {
-  {
-    console.log(blog)
-  }
   return (
     <>
       <Metadata title="Blog" />
@@ -28,6 +25,7 @@ const blog = ({ blog }) => {
                 url={fields.slug}
                 heading={fields.title}
                 snippet={fields.snippet}
+                published={fields.published}
               />
             ))}
           </BlogWrapper>

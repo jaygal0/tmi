@@ -14,7 +14,7 @@ const Div = styled.div`
 const Copyright = () => {
   return (
     <Div>
-      &copy;2021 - Designed &amp; built by
+      &copy;2021 - Designed, built &amp; tested by
       <WebsiteLink href="https://joshuagalinato.com">
         &nbsp;Joshua Galinato
       </WebsiteLink>

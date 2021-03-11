@@ -53,6 +53,7 @@ export default {
   transition: {
     nav: 'all 0.3s ease-in-out',
     link: 'all 0.5s ease-in-out',
+    images: 'all .2s ease-in-out',
   },
   margin: {
     desktop: {

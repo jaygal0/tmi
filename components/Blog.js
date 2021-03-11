@@ -12,6 +12,8 @@ const Article = styled.article`
 
   &:hover {
     cursor: pointer;
+    scale: 1.01;
+    transition: ${({ theme }) => theme.transition.images};
   }
 `
 const H3 = styled.h3`
@@ -19,6 +21,11 @@ const H3 = styled.h3`
 `
 const Snippet = styled.p`
   color: ${({ theme }) => theme.color.white};
+`
+const ReadMore = styled.a`
+  font-size: ${({ theme }) => theme.font.desktop.meta};
+  color: ${({ theme }) => theme.color.yellow};
+  text-transform: uppercase;
 `
 
 const Blog = ({ url, heading, snippet }) => {
@@ -28,6 +35,7 @@ const Blog = ({ url, heading, snippet }) => {
         <Article>
           <H3>{heading}</H3>
           <Snippet>{snippet}</Snippet>
+          <ReadMore href={`/blog/${url}`}>read more &gt;</ReadMore>
         </Article>
       </Link>
     </>
