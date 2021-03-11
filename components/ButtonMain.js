@@ -1,7 +1,18 @@
 import Link from 'next/link'
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
+const btnAnimate = keyframes`
+0% {
+ background: #F4721C;
+}
+60% {
+ background: #ED1276;
+}
+100% {
+ background: #ED1276;
+}
+`
 const Button = styled.button`
   margin-top: 4rem;
   font-size: 1.6rem;
@@ -19,6 +30,10 @@ const Button = styled.button`
   );
   color: white;
   cursor: pointer;
+
+  &:hover {
+    animation: 3s ${btnAnimate} alternate ease-in-out infinite;
+  }
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     width: 100%;

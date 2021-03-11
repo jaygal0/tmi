@@ -4,7 +4,7 @@ import HeadingNormal from './HeadingNormal'
 import styled from 'styled-components'
 import ButtonMain from './ButtonMain'
 
-const Img = styled.img`
+const IdeaWrapper = styled.div`
   grid-column: 8 / span 4;
 `
 
@@ -12,7 +12,7 @@ const TitleWrapper = styled.div`
   grid-column: 3 / span 4;
 `
 
-const HomeIdeaCard = ({ src, main, sub, color }) => {
+const HomeIdeaCard = ({ main, sub, color, ideas }) => {
   return (
     <GridContainer>
       <TitleWrapper>
@@ -20,7 +20,7 @@ const HomeIdeaCard = ({ src, main, sub, color }) => {
           <ButtonMain name="view my ideas" src="/ideas" />
         </HeadingNormal>
       </TitleWrapper>
-      <Img src={src} alt={src} />
+      <IdeaWrapper>Hello</IdeaWrapper>
     </GridContainer>
   )
 }

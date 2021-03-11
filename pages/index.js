@@ -41,7 +41,6 @@ export default function Home() {
           main="a list of my ideas"
           sub="Find out which of my ideas were successful and which failed."
           color="orange"
-          src="idea-app.png"
         />
       </main>
       <Footer />
