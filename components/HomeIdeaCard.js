@@ -16,10 +16,28 @@ const IdeaWrapper = styled.div`
   &::-webkit-scrollbar {
     width: 0;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 1 / -1;
+    margin-top: 3.2rem;
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    margin-top: 1.6rem;
+  }
 `
 
 const TitleWrapper = styled.div`
   grid-column: 3 / span 4;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 2 / span 4;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-column: 1 / -1;
+  }
 `
 
 const HomeIdeaCard = ({ main, sub, color, idea }) => {

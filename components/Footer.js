@@ -12,6 +12,10 @@ const FooterContainer = styled.footer`
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
   margin-top: 9.6rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    margin-top: 4.8rem;
+  }
 `
 
 const FooterWrapper = styled.footer`
@@ -27,6 +31,10 @@ const FooterLogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    display: none;
+  }
 `
 const Logo = styled.img`
   width: 25%;
@@ -49,6 +57,14 @@ const List = styled.a`
 `
 const FooterFormWrapper = styled.div`
   grid-column: 7 / span 5;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 3 / span 8;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    grid-column: 1 / -1;
+  }
 `
 
 const Footer = () => {

@@ -10,11 +10,23 @@ const MainImage = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-bottom: 3.2rem;
   position: relative;
+  z-index: -1;
 
   &:hover {
     cursor: pointer;
     scale: 1.01;
     transition: ${({ theme }) => theme.transition.images};
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 38.5rem;
+    height: 38.5rem;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    width: 34.5rem;
+    height: 34.5rem;
+    margin-right: 1.6rem;
   }
 `
 const Idea = ({ url, src, released, revenue, description, width, height }) => {

@@ -11,8 +11,8 @@ const blog = ({ blog }) => {
   return (
     <>
       <Metadata title="Blog" />
+      <Nav />
       <main>
-        <Nav />
         <HeadingHero
           main="what's on my mind"
           sub="Writing down all of my thoughts."

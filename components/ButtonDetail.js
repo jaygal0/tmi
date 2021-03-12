@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
+import { btnAnimate } from '../styles'
 
 const Button = styled.button`
   font-size: 1.6rem;
@@ -20,6 +20,14 @@ const Button = styled.button`
   );
   color: white;
   cursor: pointer;
+
+  &:hover {
+    animation: 3s ${btnAnimate} alternate ease-in-out infinite;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 100%;
+    margin-top: 3.2rem;
+  }
 `
 
 const ButtonDetail = ({ name, src }) => {

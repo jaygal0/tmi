@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const GridContainer = styled.section`
   display: grid;
@@ -7,11 +7,17 @@ export const GridContainer = styled.section`
   margin: 0 1.6rem 4.8rem 1.6rem;
   align-items: center;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-column-gap: 3.2rem;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, min-content);
     grid-column-gap: 1.6rem;
-    margin: 9.6rem 1.6rem;
+    margin-bottom: 4.8rem;
   }
 `
 export const HeroGridContainer = styled.section`
@@ -21,11 +27,16 @@ export const HeroGridContainer = styled.section`
   grid-column-gap: 3.2rem;
   margin: 9.6rem 1.6rem;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-column-gap: 3.2rem;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, min-content);
     grid-column-gap: 1.6rem;
-    margin: 9.6rem 1.6rem;
   }
 `
 export const HomeCard = styled.div`
@@ -40,8 +51,18 @@ export const HomeCard = styled.div`
   color: white;
   align-items: center;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 1 / -1;
+    display: grid;
+    padding: 3.2rem 1.6rem;
+    margin-bottom: 0rem;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     grid-column: 1 / -1;
+    display: block;
+    padding: 3.2rem 1.6rem;
+    margin-bottom: 0rem;
   }
 `
 export const WebsiteLink = styled.a`
@@ -51,4 +72,12 @@ export const WebsiteLink = styled.a`
     color: ${({ theme }) => theme.color.yellow};
     transition: ${({ theme }) => theme.transition.link};
   }
+`
+export const btnAnimate = keyframes`
+0% {
+ background: #F4721C;
+}
+100% {
+ background: #ED1276;
+}
 `

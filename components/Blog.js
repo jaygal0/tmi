@@ -15,6 +15,10 @@ const Article = styled.article`
     scale: 1.01;
     transition: ${({ theme }) => theme.transition.images};
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    padding: 3.2rem 1.6rem;
+  }
 `
 const H3 = styled.h3`
   color: ${({ theme }) => theme.color.yellow};

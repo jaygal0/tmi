@@ -7,6 +7,10 @@ const Img = styled.img`
   grid-column: 6 / span 4;
   justify-self: center;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    width: 80%;
+  }
+
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     display: none;
   }

@@ -12,26 +12,28 @@ const ideas = ({ idea }) => {
     <>
       <Metadata title="Ideas" />
       <Nav />
-      <HeadingHero
-        main="a list of my ideas"
-        sub="Documenting every idea and finding out when to move on."
-      />
-      <GridContainer>
-        <IdeaWrapper>
-          {idea.map(({ fields, sys }) => (
-            <Idea
-              key={sys.id}
-              url={fields.slug.toLowerCase()}
-              src={fields.image.fields.file.url}
-              width={fields.image.fields.file.details.image.width}
-              height={fields.image.fields.file.details.image.height}
-              released={fields.released}
-              revenue={fields.revenue}
-              description={fields.image.fields.description}
-            />
-          ))}
-        </IdeaWrapper>
-      </GridContainer>
+      <main>
+        <HeadingHero
+          main="a list of my ideas"
+          sub="Documenting every idea and finding out when to move on."
+        />
+        <GridContainer>
+          <IdeaWrapper>
+            {idea.map(({ fields, sys }) => (
+              <Idea
+                key={sys.id}
+                url={fields.slug.toLowerCase()}
+                src={fields.image.fields.file.url}
+                width={fields.image.fields.file.details.image.width}
+                height={fields.image.fields.file.details.image.height}
+                released={fields.released}
+                revenue={fields.revenue}
+                description={fields.image.fields.description}
+              />
+            ))}
+          </IdeaWrapper>
+        </GridContainer>
+      </main>
       <Footer />
     </>
   )

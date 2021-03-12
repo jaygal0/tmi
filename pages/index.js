@@ -11,8 +11,8 @@ export default function Home({ idea }) {
   return (
     <>
       <Metadata title="Home" />
+      <Nav />
       <main>
-        <Nav />
         <HeadingHero
           main="testing my ideas"
           sub="I have many ideas, this site reminds me when to let go and test a new one."

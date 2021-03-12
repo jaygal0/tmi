@@ -10,8 +10,8 @@ const about = ({ about }) => {
   return (
     <>
       <Metadata title="About" />
+      <Nav />
       <main>
-        <Nav />
         <HeadingHero main={about.title} sub={about.sub} />
         <TextBox heading={about.heading}>
           {documentToReactComponents(about.body)}

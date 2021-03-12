@@ -13,6 +13,13 @@ body {
   letter-spacing: 0.05rem;
 }
 
+main {
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
+    overflow: hidden;
+  }
+}
+
 h1 {
   font-size: ${({ theme }) => theme.font.desktop.h1};
   line-height: ${({ theme }) => theme.lineHeight.desktop.h1};

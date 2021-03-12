@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Idea from './Idea'
 
 const Wrapper = styled.div`
   grid-column: 3 / span 8;
@@ -10,6 +9,10 @@ const Wrapper = styled.div`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 1 / -1;
   }
 `
 

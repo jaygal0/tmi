@@ -12,8 +12,8 @@ const ideasDetail = ({ article }) => {
   return (
     <>
       <Metadata title={article.fields.title} />
+      <Nav />
       <main>
-        <Nav />
         <HeadingHero
           main={article.fields.title}
           sub={article.fields.oneliner}

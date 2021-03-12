@@ -20,6 +20,9 @@ const SubHeading = styled.h2`
 const TitleWrapper = styled.div`
   grid-column: 3 / span 5;
 
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 2 / span 4;
+  }
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     grid-column: 1 / -1;
   }
@@ -28,6 +31,10 @@ const TitleWrapper = styled.div`
 const ButtonWrapper = styled.div`
   grid-row: 2;
   grid-column: 3 / span 2;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
+    grid-column: 2 / span 4;
+  }
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     grid-column: 1 / -1;
