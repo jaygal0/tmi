@@ -72,7 +72,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <FooterLogoWrapper>
-          <Logo src="/logo.svg" alt="logo" />
+          <Logo src="/logo-white.svg" alt="tmi logo" />
           <NavWrapper>
             <Link href="/">
               <List>home</List>

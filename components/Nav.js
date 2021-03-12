@@ -108,7 +108,7 @@ const Nav = () => {
     <Header>
       <Navbar>
         <Link href="/">
-          <Img src="/logo.svg" alt="logo" />
+          <Img src="/logo.svg" alt="tmi logo" />
         </Link>
         <BurgerIcon src="/burger.svg" alt="burger icon" onClick={showSidebar} />
         <NavContainer className={sidebar ? 'hideLinks' : 'showLinks'}>
