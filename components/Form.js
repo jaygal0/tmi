@@ -48,9 +48,21 @@ const Form = () => {
         Stay up-to-date with what idea I will be releasing next and find out if
         was successful or not.
       </Text>
-      <form>
+      <form
+        action="https://joshuagalinato.us1.list-manage.com/subscribe/post?u=b794ca56b0a0a03f2f12e3032&amp;id=c77fa14c62"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_blank"
+        noValidate
+      >
         <label htmlFor=""></label>
-        <Input type="text" placeholder="enter email" />
+        <Input
+          type="email"
+          name="EMAIL"
+          placeholder="enter email"
+          id="mce-EMAIL"
+        />
         <br />
         <Button type="button" value="submit" />
       </form>
