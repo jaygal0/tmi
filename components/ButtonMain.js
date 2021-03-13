@@ -6,7 +6,7 @@ import { btnAnimate } from '../styles'
 const Button = styled.button`
   margin-top: 4rem;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 700;
   padding: 0.8rem 2.4rem;
   border-radius: 2.4rem;
   outline: none;

@@ -39,7 +39,7 @@ const List = styled.a`
 
   &.active {
     color: ${({ theme }) => theme.color.pink};
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &:hover {
@@ -51,12 +51,12 @@ const List = styled.a`
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     margin: 0;
     margin-top: 3.2rem;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
 
     &.active {
       color: ${({ theme }) => theme.color.yellow};
-      font-weight: bold;
+      font-weight: 700;
     }
 
     &:hover {
