@@ -15,7 +15,7 @@ const Copyright = () => {
   return (
     <Div>
       &copy;2021 - Designed, built &amp; tested by
-      <WebsiteLink href="https://joshuagalinato.com">
+      <WebsiteLink href="https://joshuagalinato.com" target="_blank">
         &nbsp;Joshua Galinato
       </WebsiteLink>
     </Div>

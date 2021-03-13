@@ -10,7 +10,7 @@ import Blog from '../components/Blog'
 const blog = ({ blog }) => {
   return (
     <>
-      <Metadata title="Blog" />
+      <Metadata title="Blog" desc="writing down all of my thoughts." />
       <Nav />
       <main>
         <HeadingHero
@@ -50,6 +50,7 @@ export const getStaticProps = async () => {
     props: {
       blog: data.items,
     },
+    revalidate: 1,
   }
 }
 

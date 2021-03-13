@@ -10,7 +10,10 @@ import Idea from '../components/Idea'
 const ideas = ({ idea }) => {
   return (
     <>
-      <Metadata title="Ideas" />
+      <Metadata
+        title="Ideas"
+        desc="a list of my ideas that i've tested in the past"
+      />
       <Nav />
       <main>
         <HeadingHero
@@ -53,6 +56,7 @@ export const getStaticProps = async () => {
     props: {
       idea: data.items,
     },
+    revalidate: 1,
   }
 }
 

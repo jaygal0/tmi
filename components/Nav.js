@@ -35,6 +35,7 @@ const NavContainer = styled.div`
 const List = styled.a`
   text-decoration: none;
   margin: 0 3.2rem;
+  color: ${({ theme }) => theme.color.darkBlue};
 
   &.active {
     color: ${({ theme }) => theme.color.pink};

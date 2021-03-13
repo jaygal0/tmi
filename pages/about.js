@@ -9,7 +9,10 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const about = ({ about }) => {
   return (
     <>
-      <Metadata title="About" />
+      <Metadata
+        title="About"
+        desc="understand why i built this site and how it holds me accountable."
+      />
       <Nav />
       <main>
         <HeadingHero main={about.title} sub={about.sub} />
@@ -36,6 +39,7 @@ export const getStaticProps = async () => {
     props: {
       about: data.items[0].fields,
     },
+    revalidate: 1,
   }
 }
 

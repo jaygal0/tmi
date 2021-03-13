@@ -10,7 +10,7 @@ const MainImage = styled.div`
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-right: 3.2rem;
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
 
   &:hover {
     cursor: pointer;

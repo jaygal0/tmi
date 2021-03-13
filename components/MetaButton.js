@@ -29,7 +29,7 @@ const MetaButton = ({ released, revenue }) => {
     <>
       <Wrapper>
         <Border>released: {dateComponent}</Border>
-        <Border>revenue: ${revenue}</Border>
+        <Border>revenue: £{revenue}</Border>
         <Border className={check === 'failed' ? 'failed' : ''}>{check}</Border>
       </Wrapper>
     </>

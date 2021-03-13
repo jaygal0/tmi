@@ -14,12 +14,12 @@ const blogDetail = ({ article }) => {
 
   return (
     <>
-      <Metadata title={article.fields.title} />
+      <Metadata title={article.fields.title} desc={article.fields.subHeading} />
       <Nav />
       <main>
         <HeadingHero
           main={article.fields.title}
-          sub={article.fields.snippet}
+          sub={article.fields.subHeading}
           published={dateComponent}
         />
         <TextBox>{documentToReactComponents(article.fields.body)}</TextBox>
@@ -42,7 +42,7 @@ export const getStaticPaths = async () => {
     paths: data.items.map((item) => ({
       params: { slug: item.fields.slug },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -56,6 +56,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       article: data.items[0],
     },
+    revalidate: 1,
   }
 }
 

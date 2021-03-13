@@ -72,6 +72,13 @@ p {
   margin-bottom: ${({ theme }) => theme.margin.desktop.bottom};
 }
 
+a {
+  color: ${({ theme }) => theme.color.pink};
+
+  &:hover {
+  color: ${({ theme }) => theme.color.blue};
+  }
+}
 `
 
 export default GlobalStyle

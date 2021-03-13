@@ -10,7 +10,10 @@ import Nav from '../components/Nav'
 export default function Home({ idea }) {
   return (
     <>
-      <Metadata title="Home" />
+      <Metadata
+        title="Home"
+        desc="testing my ideas. I have many ideas, this site reminds me when to let go and test a new one."
+      />
       <Nav />
       <main>
         <HeadingHero
@@ -21,20 +24,20 @@ export default function Home({ idea }) {
         </HeadingHero>
         <HomeCardRight
           main="kill your darlings"
-          sub="I find it hard to move on from an idea, but if I don’t, I won’t have the time to find a successful one."
+          sub="I find it hard to move on from an idea, that's why I built this site to hold me accountable and recognise when to let go and test a new one."
           src="/cross.svg"
           color="yellow"
         />
         <HomeCardLeft
           main="when to move on"
           src="/three-dots.svg"
-          sub="The rule is simple; if the idea doesn’t generate $1000 of revenue after the first 3 months, it’s time for me to test a new idea."
+          sub="The rule is simple; if the idea doesn’t generate £1000 of revenue after the first 3 months, it’s time for me to test a new idea."
           color="pink"
         />
         <HomeCardRight
           main="creating the idea"
           src="design-process.svg"
-          sub="By using the mindset of design sprints and design principles, I’ll be able to quickly create an MVP and test out the idea. "
+          sub="I need to be able to design, build and release a minimal viable product as quickly as possible. That way, I can focus on testing and improving the idea."
           color="orange"
         />
         <HomeIdeaCard
@@ -63,5 +66,6 @@ export const getStaticProps = async () => {
     props: {
       idea: data.items,
     },
+    revalidate: 1,
   }
 }

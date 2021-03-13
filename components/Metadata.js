@@ -1,11 +1,13 @@
 import React from 'react'
 import Head from 'next/head'
 
-const Metadata = ({ title }) => {
+const Metadata = ({ title, desc }) => {
   return (
     <Head>
-      <title>TMI | {title}</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>tmi | {title}</title>
+      <link rel="icon" href="/favicon.png" />
+      <meta name="description" content={desc} />
+      <meta name="robots" content="index, follow" />
     </Head>
   )
 }

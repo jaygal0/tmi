@@ -11,7 +11,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const ideasDetail = ({ article }) => {
   return (
     <>
-      <Metadata title={article.fields.title} />
+      <Metadata title={article.fields.title} desc={article.fields.oneliner} />
       <Nav />
       <main>
         <HeadingHero
@@ -50,7 +50,7 @@ export const getStaticPaths = async () => {
         slug: item.fields.slug.toLowerCase(),
       },
     })),
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -64,6 +64,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       article: data.items[0],
     },
+    revalidate: 1,
   }
 }
 
