@@ -8,7 +8,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import moment from 'moment'
 
 const blogDetail = ({ article }) => {
-  console.log(article)
+  if (!article) return <div>404</div>
   let date = moment(article.fields.published)
   let dateComponent = date.locale('en-gb').format('L')
 
@@ -56,7 +56,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       article: data.items[0],
     },
-    revalidate: 1,
+    revalidate: 60,
   }
 }
 

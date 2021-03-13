@@ -9,6 +9,7 @@ import ButtonDetail from '../../components/ButtonDetail'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const ideasDetail = ({ article }) => {
+  if (!article) return <div>404</div>
   return (
     <>
       <Metadata title={article.fields.title} desc={article.fields.oneliner} />
@@ -64,7 +65,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       article: data.items[0],
     },
-    revalidate: 1,
+    revalidate: 60,
   }
 }
 
