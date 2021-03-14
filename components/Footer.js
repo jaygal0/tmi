@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Form from './Form'
 import Copyright from './Copyright'
-import Image from 'next/Image'
+import Image from 'next/image'
 
 const FooterContainer = styled.footer`
   width: 100%;

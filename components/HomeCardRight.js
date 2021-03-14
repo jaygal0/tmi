@@ -2,7 +2,7 @@ import React from 'react'
 import HeadingNormal from './HeadingNormal'
 import { GridContainer, HomeCard } from '../styles'
 import styled from 'styled-components'
-import Image from 'next/Image'
+import Image from 'next/image'
 
 const ImgWrapper = styled.div`
   grid-column: 2 / span 4;

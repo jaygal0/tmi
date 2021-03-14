@@ -82,6 +82,11 @@ a {
   color: ${({ theme }) => theme.color.blue};
   }
 }
+
+input::-webkit-input-placeholder {
+  color: white;
+  opacity: .7;
+}
 `
 
 export default GlobalStyle

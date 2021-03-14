@@ -23,9 +23,12 @@ const Input = styled.input`
     outline: none;
     border-bottom: 1px solid ${({ theme }) => theme.color.yellow};
   }
-
   ::placeholder {
     text-transform: uppercase;
+    color: white;
+  }
+  :placeholder-shown {
+    color: white;
   }
 `
 
