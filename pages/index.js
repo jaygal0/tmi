@@ -36,7 +36,7 @@ export default function Home({ idea }) {
         />
         <HomeCardRight
           main="creating the idea"
-          src="design-process.svg"
+          src="/design-process.svg"
           sub="I need to be able to design, build and release a minimal viable product as quickly as possible. That way, I can focus on testing and improving the idea."
           color="orange"
         />

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
-import ButtonSecondary from './ButtonSecondary'
 import styled from 'styled-components'
 import Form from './Form'
 import Copyright from './Copyright'
+import Image from 'next/Image'
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -31,12 +31,13 @@ const FooterLogoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
     display: none;
   }
 `
-const Logo = styled.img`
+const LogoWrapper = styled.div`
   width: 25%;
 `
 
@@ -72,7 +73,15 @@ const Footer = () => {
     <FooterContainer>
       <FooterWrapper>
         <FooterLogoWrapper>
-          <Logo src="/logo-white.svg" alt="tmi logo" />
+          <LogoWrapper>
+            <Image
+              src="/logo-white.svg"
+              alt="tmi logo in white"
+              width={118.6}
+              height={32.15}
+              quality={100}
+            />
+          </LogoWrapper>
           <NavWrapper>
             <Link href="/">
               <List>home</List>

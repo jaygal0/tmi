@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const Navbar = styled.nav`
   display: flex;
@@ -66,9 +67,6 @@ const List = styled.a`
     }
   }
 `
-const Img = styled.img`
-  cursor: pointer;
-`
 const Header = styled.header`
   position: relative;
 `
@@ -90,7 +88,7 @@ const NavBackground = styled.div`
     }
   }
 `
-const BurgerIcon = styled.img`
+const BurgerIcon = styled.div`
   @media screen and (min-width: ${({ theme }) => theme.breakPoint.desktop}) {
     display: none;
   }
@@ -109,9 +107,29 @@ const Nav = () => {
     <Header>
       <Navbar>
         <Link href="/">
-          <Img src="/logo.svg" alt="tmi logo" />
+          <Image
+            src="/logo.svg"
+            alt="tmi logo"
+            width={107}
+            height={28.98}
+            quality={100}
+            className="logo"
+          />
         </Link>
-        <BurgerIcon src="/burger.svg" alt="burger icon" onClick={showSidebar} />
+        <style jsx global>{`
+          .logo {
+            cursor: pointer;
+          }
+        `}</style>
+        <BurgerIcon>
+          <Image
+            src="/burger.svg"
+            alt="burger icon"
+            width={38}
+            height={24}
+            onClick={showSidebar}
+          />
+        </BurgerIcon>
         <NavContainer className={sidebar ? 'hideLinks' : 'showLinks'}>
           <Link href="/">
             <List

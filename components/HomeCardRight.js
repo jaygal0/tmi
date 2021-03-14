@@ -2,14 +2,14 @@ import React from 'react'
 import HeadingNormal from './HeadingNormal'
 import { GridContainer, HomeCard } from '../styles'
 import styled from 'styled-components'
+import Image from 'next/Image'
 
-const Img = styled.img`
+const ImgWrapper = styled.div`
   grid-column: 2 / span 4;
   justify-self: center;
-
-  @media screen and (max-width: ${({ theme }) => theme.breakPoint.tablet}) {
-    width: 70%;
-  }
+  width: 90%;
+  height: 90%;
+  position: relative;
 
   @media screen and (max-width: ${({ theme }) => theme.breakPoint.phone}) {
     display: none;
@@ -28,7 +28,9 @@ const HomeCardRight = ({ src, main, sub, color }) => {
   return (
     <GridContainer>
       <HomeCard>
-        <Img src={src} alt={src} />
+        <ImgWrapper>
+          <Image src={src} alt={src} layout="fill" />
+        </ImgWrapper>
         <Wrapper>
           <HeadingNormal color={color} main={main} sub={sub} />
         </Wrapper>
