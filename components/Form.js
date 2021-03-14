@@ -47,10 +47,7 @@ const Form = () => {
   return (
     <>
       <Heading>follow my journey</Heading>
-      <Text>
-        Stay up-to-date with what idea I will be releasing next and find out if
-        was successful or not.
-      </Text>
+      <Text>Sign up and stay up-to-date with every idea that I test out.</Text>
       <form
         action="https://joshuagalinato.us1.list-manage.com/subscribe/post?u=b794ca56b0a0a03f2f12e3032&amp;id=c77fa14c62"
         method="post"
